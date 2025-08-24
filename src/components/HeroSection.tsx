@@ -1,6 +1,9 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
+// Get the base URL for GitHub Pages deployment
+const base = import.meta.env.BASE_URL;
+
 export const HeroSection: React.FC = () => {
   const { ref, isIntersecting } = useIntersectionObserver();
 
@@ -20,7 +23,7 @@ export const HeroSection: React.FC = () => {
           {/* Avatar (badge removed) */}
           <div className={`relative inline-flex items-center justify-center w-32 h-32 mb-8 rounded-full shadow-lg ${isIntersecting ? 'animate-float' : ''}`}>
             <img
-              src="/images/MeEdit.jpg"
+              src={`${base}images/MeEdit.jpg`}
               alt="Nabeel Syed Hasan"
               className="w-32 h-32 rounded-full object-cover ring-4 ring-brand-accent/20"
               loading="eager"

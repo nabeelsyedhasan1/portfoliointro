@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
+// Get the base URL for GitHub Pages deployment
+const base = import.meta.env.BASE_URL;
+
 /** Click-to-cycle image card.
  * - Click anywhere on the image to advance to the next.
  * - If captions are provided, they change with the image.
@@ -56,8 +59,8 @@ export const PhotosSection: React.FC = () => {
             <div className="card">
               <ClickCarousel
                 images={[
-                  { src: '/images/Himachal1.jpg', alt: 'Trek photo in Tosh, Himachal Pradesh', caption: 'Tosh, Himachal Pradesh' },
-                  { src: '/images/Himachal2.jpg', alt: 'Trek photo in Kutla, Himachal Pradesh', caption: 'Kutla, Himachal Pradesh' }
+                  { src: `${base}images/Himachal1.jpg`, alt: 'Trek photo in Tosh, Himachal Pradesh', caption: 'Tosh, Himachal Pradesh' },
+                  { src: `${base}images/Himachal2.jpg`, alt: 'Trek photo in Kutla, Himachal Pradesh', caption: 'Kutla, Himachal Pradesh' }
                 ]}
                 showCaption={true}
               />
@@ -67,7 +70,7 @@ export const PhotosSection: React.FC = () => {
             <div className="card">
               <ClickCarousel
                 images={[
-                  { src: '/images/MeCoC.jpg', alt: 'Profile photo', caption: 'Me playing clash of Clans' }
+                  { src: `${base}images/MeCoC.jpg`, alt: 'Profile photo', caption: 'Me playing clash of Clans' }
                 ]}
                 showCaption={true}
               />
@@ -77,8 +80,8 @@ export const PhotosSection: React.FC = () => {
             <div className="card">
               <ClickCarousel
                 images={[
-                  { src: '/images/chungus1.jpg', alt: 'My cat Chungus looking at the camera', caption: 'Spending time with my pet cat' },
-                  { src: '/images/chungus2.jpg', alt: 'My cat Chungus sleeping', caption: 'I named him Chungus (after a meme 😄 )' }
+                  { src: `${base}images/chungus1.jpg`, alt: 'My cat Chungus looking at the camera', caption: 'Spending time with my pet cat' },
+                  { src: `${base}images/chungus2.jpg`, alt: 'My cat Chungus sleeping', caption: 'I named him Chungus (after a meme 😄 )' }
                 ]}
                 showCaption={true}
               />
