@@ -18,11 +18,11 @@ export const HeroSection: React.FC = () => {
           }`}
         >
           {/* Avatar (badge removed) */}
-          <div className={`relative inline-flex items-center justify-center w-24 h-24 mb-8 rounded-full shadow-lg ${isIntersecting ? 'animate-float' : ''}`}>
+          <div className={`relative inline-flex items-center justify-center w-32 h-32 mb-8 rounded-full shadow-lg ${isIntersecting ? 'animate-float' : ''}`}>
             <img
-              src="/images/MeCoC.jpg"
+              src="/images/MeEdit.jpg"
               alt="Nabeel Syed Hasan"
-              className="w-24 h-24 rounded-full object-cover ring-4 ring-brand-accent/20"
+              className="w-32 h-32 rounded-full object-cover ring-4 ring-brand-accent/20"
               loading="eager"
             />
           </div>

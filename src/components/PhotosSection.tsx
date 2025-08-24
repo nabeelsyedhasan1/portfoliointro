@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Camera } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 /** Click-to-cycle image card.
@@ -15,7 +14,7 @@ const ClickCarousel: React.FC<{ images: Img[]; showCaption?: boolean }> = ({ ima
 
   return (
     <div className="group cursor-pointer select-none" onClick={next} aria-label="Click to view next photo">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-brand-border dark:border-gray-700 shadow-lg">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border-2 border-brand-border dark:border-gray-700 shadow-lg">
         <img
           key={current.src + idx}
           src={current.src}
@@ -24,10 +23,7 @@ const ClickCarousel: React.FC<{ images: Img[]; showCaption?: boolean }> = ({ ima
           loading="lazy"
         />
         {/* Subtle overlay & helper */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="absolute bottom-2 right-2 text-xs px-2 py-1 rounded-full bg-black/40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Click to change
-        </div>
+        
       </div>
       {showCaption && current.caption && (
         <div className="mt-3 text-center">
@@ -50,12 +46,9 @@ export const PhotosSection: React.FC = () => {
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`transition-all duration-1000 ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Header */}
-          <div className="flex items-center justify-center mb-10">
-            <div className="inline-flex items-center px-4 py-2 bg-brand-muted dark:bg-gray-800 rounded-full border border-brand-border dark:border-gray-700">
-              <Camera className="h-5 w-5 text-brand-accent mr-2" />
-              <span className="text-sm font-medium text-brand-text-muted dark:text-gray-300">What I like to do in my free time</span>
-            </div>
-          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 font-sora text-brand-text dark:text-gray-100">
+            What I Like to do in my free time
+          </h2>
 
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -74,7 +67,7 @@ export const PhotosSection: React.FC = () => {
             <div className="card">
               <ClickCarousel
                 images={[
-                  { src: '/images/MeEdit.jpg', alt: 'Profile photo', caption: 'Me playing clash of Clans' }
+                  { src: '/images/MeCoC.jpg', alt: 'Profile photo', caption: 'Me playing clash of Clans' }
                 ]}
                 showCaption={true}
               />
@@ -84,16 +77,16 @@ export const PhotosSection: React.FC = () => {
             <div className="card">
               <ClickCarousel
                 images={[
-                  { src: '/images/chungus1.jpg', alt: 'My cat Chungus looking at the camera', caption: 'My pet cat (chungus)' },
-                  { src: '/images/chungus2.jpg', alt: 'My cat Chungus sleeping', caption: 'My pet cat (chungus)' }
+                  { src: '/images/chungus1.jpg', alt: 'My cat Chungus looking at the camera', caption: 'Spending time with my pet cat' },
+                  { src: '/images/chungus2.jpg', alt: 'My cat Chungus sleeping', caption: 'I named him Chungus (after a meme 😄 )' }
                 ]}
                 showCaption={true}
               />
             </div>
           </div>
 
-          {/* Helper note */}
-          <p className="mt-6 text-center text-sm text-brand-text-muted dark:text-gray-400">Tip: click photos to cycle.</p>
+          
+          
         </div>
       </div>
     </section>
