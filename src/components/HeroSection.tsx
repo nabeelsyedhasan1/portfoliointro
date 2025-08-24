@@ -1,6 +1,5 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import MeEdit from './MeEdit.jpg';
 
 export const HeroSection: React.FC = () => {
   const { ref, isIntersecting } = useIntersectionObserver();
@@ -21,7 +20,7 @@ export const HeroSection: React.FC = () => {
           {/* Avatar (badge removed) */}
           <div className={`relative inline-flex items-center justify-center w-24 h-24 mb-8 rounded-full shadow-lg ${isIntersecting ? 'animate-float' : ''}`}>
             <img
-              src={MeEdit}
+              src="/images/MeCoC.jpg"
               alt="Nabeel Syed Hasan"
               className="w-24 h-24 rounded-full object-cover ring-4 ring-brand-accent/20"
               loading="eager"

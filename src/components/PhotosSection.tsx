@@ -70,24 +70,24 @@ export const PhotosSection: React.FC = () => {
               />
             </div>
 
-            {/* Card 2: Clash of Clans (single image, updated caption) */}
+            {/* Card 2: Profile photo */}
             <div className="card">
               <ClickCarousel
                 images={[
-                  { src: '/images/ClashOfClans.jpg', alt: 'Playing Clash of Clans on my phone', caption: 'Me playing Clash of Clans' }
+                  { src: '/images/MeEdit.jpg', alt: 'Profile photo', caption: 'Me playing clash of Clans' }
                 ]}
                 showCaption={true}
               />
             </div>
 
-            {/* Card 3: Cat (same display as card 1, no captions) */}
+            {/* Card 3: Cat (same display as card 1, with captions) */}
             <div className="card">
               <ClickCarousel
                 images={[
-                  { src: '/images/Chungus1.jpg', alt: 'My cat Chungus looking at the camera' },
-                  { src: '/images/Chungus2.jpg', alt: 'My cat Chungus sleeping' }
+                  { src: '/images/chungus1.jpg', alt: 'My cat Chungus looking at the camera', caption: 'My pet cat (chungus)' },
+                  { src: '/images/chungus2.jpg', alt: 'My cat Chungus sleeping', caption: 'My pet cat (chungus)' }
                 ]}
-                showCaption={false}
+                showCaption={true}
               />
             </div>
           </div>
